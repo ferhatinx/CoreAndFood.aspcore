@@ -1,0 +1,29 @@
+﻿@using EntityMvc.Models.Class
+@model List<Yetenekler>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutNavbar.cshtml";
+}
+
+<h2>Yetenek Listesi</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>YETENEK</th>
+        <th>DEĞER</th>
+        <th>Güncelle</th>
+    </tr>
+    @foreach (var p in Model)
+    {
+    <tr>
+        <td>@p.ID</td>
+        <td>@p.Acıklama</td>
+        <td>@p.Deger</td>
+        <td><a href="/Admin/YetenekSil/@p.ID" class="btn btn-danger">Sil</a></td>
+        <td><a href="/Admin/YetenekGüncelle/@p.ID" class="btn btn-primary">Güncelle</a></td>
+    </tr>
+    }
+
+</table>

@@ -1,0 +1,43 @@
+﻿@model CoreAndFood.Data.Models.Food
+@{
+    ViewData["Title"] = "FoodGet";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>FoodGet</h2>
+
+
+@using (Html.BeginForm("FoodUpdate", "Food", FormMethod.Post))
+{
+    <label>Food ID</label>
+    <br />
+    @Html.TextBoxFor(x => x.FoodID, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.FoodID, "", new { @style = "color:red;" })
+    <br />
+    <label>Food Name</label>
+    <br />
+    @Html.TextBoxFor(x => x.FoodNAME, new { @class = "form-control" })
+
+    <br />
+    <label>Stock</label>
+    <br />
+    @Html.TextBoxFor(x => x.Stock, new { @class = "form-control" })
+    <br />
+    <label>Price</label>
+    <br />
+    @Html.TextBoxFor(x => x.Price, new { @class = "form-control" })
+    <br />
+    <label>Description</label>
+    <br />
+    @Html.TextBoxFor(x => x.FoodDescription, new { @class = "form-control" })
+    <br />
+    <label>ImageUrl</label>
+    <br />
+    @Html.TextBoxFor(x => x.ImageUrl, new { @class = "form-control" })
+    <br />
+    <label>Food Category</label>
+    <br />
+    @Html.TextBoxFor(x => x.Category, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-primary">Category Update</button>
+}

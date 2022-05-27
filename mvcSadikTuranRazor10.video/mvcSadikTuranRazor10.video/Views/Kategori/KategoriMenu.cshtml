@@ -1,0 +1,13 @@
+﻿@using mvcSadikTuranRazor10.video.Models
+@model List<Kategori>
+
+
+<div class="list-group">
+    @foreach (var kategori in Model)
+    {
+        <a href="#" class="list-group-item list-group-item-action disabled">@kategori.KategoriAD</a>
+    }
+</div>
+
+
+

@@ -1,0 +1,18 @@
+﻿@model EntityMvc.Models.Class.Yetenekler
+@{
+    ViewBag.Title = "YetenekGüncelle";
+    Layout = "~/Views/Shared/_LayoutNavbar.cshtml";
+}
+
+<form class="form-group" method="get">
+    <div>
+        <label>Yetenek Açıklama</label>
+        @Html.TextBoxFor(x => x.Acıklama, new { @class = "form-control" })
+    </div>
+    <div style="margin-top:20px;">
+        <label>Yetenek Değeri</label>
+        @Html.TextAreaFor(x => x.Deger, new { @class = "form-control" })
+    </div>
+    <button class="btn btn-warning">Kaydet</button>
+</form>
+

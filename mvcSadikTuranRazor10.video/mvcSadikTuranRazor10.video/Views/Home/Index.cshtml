@@ -1,0 +1,55 @@
+﻿@using mvcSadikTuranRazor10.video.Models
+@* yada
+    @model List<mvcSadikTuranRazor10.video.Models.Urun>
+*@
+@*@model List<Urun>*@
+@model UrunKategoriModel
+@{
+    ViewBag.Title = "Index";
+}
+<h3>Urunler</h3>
+<div class="alert alert-warning" role="alert">
+    <div class="col-md-12">
+       <h4>Ürün Sayısı</h4>
+        @Model.UrunSayisi
+    </div>
+   
+</div>
+<div class="container">
+    <div class="row">
+     
+       
+            <table class="table table-striped table-dark table-hover">
+                <thead>
+
+                    <tr>
+                        <th scope="col">Ürün ID</th>
+                        <th scope="col">Ürün Adı</th>
+                        <th scope="col">Ürün Fiyat</th>
+                        <th scope="col">Ürün Açıklama</th>
+                        <th scope="col">Ürün Satış Durumu</th>
+                        <th scope="col">Ürün Detay</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var urun in Model.Urunler)
+                    {
+                    <tr>
+                        <th scope="row">@urun.UrunID</th>
+                        <td>@urun.UrunADI</td>
+                        <td>@urun.Fiyat</td>
+                        <td>@urun.Acıklama</td>
+                        <td>@urun.Satistami</td>
+                        @*<td><a href="/Home/Details/?urunid=@urun.UrunID" class="btn btn-warning">Ürün Detay</a></td>*@
+                        @Html.ActionLink("Urunu İncele","Details", new{@class="btn btn-warning"}, new {@urun=urun.UrunID})
+                    </tr>
+
+
+                    }
+                </tbody>
+            </table>
+  
+        
+       
+    </div>
+</div>

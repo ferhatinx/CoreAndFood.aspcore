@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1831
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Proje20_DropdownMenuTennisRegister", "Proje20_DropdownMenuTennisRegister\Proje20_DropdownMenuTennisRegister.csproj", "{5AAA4D88-6D4E-40D6-A968-E649C4046B76}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5AAA4D88-6D4E-40D6-A968-E649C4046B76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5AAA4D88-6D4E-40D6-A968-E649C4046B76}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5AAA4D88-6D4E-40D6-A968-E649C4046B76}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5AAA4D88-6D4E-40D6-A968-E649C4046B76}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3ADFC9E3-F903-443D-BB54-F9083F782651}
+	EndGlobalSection
+EndGlobal

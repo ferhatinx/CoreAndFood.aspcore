@@ -1,0 +1,28 @@
+﻿@model mvcSadikTuranRazor10.video.Models.Urun
+@{
+    ViewBag.Title = "Details";
+}
+
+<div class="row">
+    <div class="col-md-4">
+        <img src="~/img/@Model.Resim"/>
+    </div>
+    <div class="col-md-8">
+        <h4>@Model.UrunADI</h4>
+        <h5>ACIKLAMA</h5>
+        <p>@Model.Acıklama</p>
+        <h5>FİYAT</h5>
+        <p>@Model.Fiyat</p>
+        <h5>Satış Durumu</h5>
+        <p>
+        @if (Model.Satistami==true)
+        {
+            Console.Write("Stokta");
+        }
+        else
+        {
+            Console.Write("Stokta YOK");
+        }
+        </p>
+    </div>
+</div>

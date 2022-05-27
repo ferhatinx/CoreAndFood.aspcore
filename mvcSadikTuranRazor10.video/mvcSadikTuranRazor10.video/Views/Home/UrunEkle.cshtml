@@ -1,0 +1,39 @@
+﻿
+@{
+    ViewBag.Title = "UrunEkle";
+}
+
+<h2>UrunEkle</h2>
+<hr />
+
+
+@using (Html.BeginForm("UrunEkle","Home",FormMethod.Post))
+{
+<div class="form-horizontal">
+    <div class="form-group">
+        <label for="exampleInputEmail1" class="control-label col-md-3">Ürün Adı</label>
+        @Html.TextBox("UrunADI", null, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1" class="control-label col-md-3">Ürün Açıklama</label>
+        @Html.TextBox("Acıklama", null, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1" class="control-label col-md-3">Fiyat</label>
+        @Html.TextBox("Fiyat", null, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1" class="control-label col-md-3">Resim</label>
+        @Html.TextBox("Resim", null, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1" class="control-label col-md-3">Ürün Satış Durumu</label>
+        <div class="col-md-9">
+            Evet :@Html.RadioButton("Satistami", true, new { @class = "form-control" })
+            Hayır :@Html.RadioButton("Satistami", false, new { @class = "form-control" })
+        </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary col-md-offset-3 col-md-3">Submit</button>
+</div>
+}
